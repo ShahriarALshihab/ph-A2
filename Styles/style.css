@@ -72,6 +72,157 @@ background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #fbbf24 100%);
    
 }
 
+/* Hero Section  */
+
+.hero-section {
+background-image: url("../assets/hero-bg.png");
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow:visible; 
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 2rem;
+}
+
+.soundwave {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+
+.hero-center {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+    z-index: 2;
+}
+
+.hero-circle {
+    width: 250px;
+    height: 250px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.microphone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+}
+
+.new-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #00ff88;
+    color: #1a0b2e;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-spotify {
+    background: linear-gradient(135deg, #fbbf24, #ec4899, #a855f7);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-subscribe {
+    background: transparent;
+    border: 2px solid #00ff88;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    color: #00ff88;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-spotify:hover,
+.btn-subscribe:hover {
+    transform: scale(1.05);
+}
+
+.btn-subscribe:hover {
+    background: #00ff88;
+    color: #1a0b2e;
+}
+
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
 
 
 
@@ -89,3 +240,30 @@ background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #fbbf24 100%);
 }
 }
 
+@media screen and (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-circle {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .microphone {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-spotify,
+    .btn-subscribe {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+}
